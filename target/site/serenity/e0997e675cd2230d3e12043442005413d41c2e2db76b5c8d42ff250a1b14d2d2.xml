@@ -1,0 +1,22 @@
+<acceptance-test-run title="un client enregistre dans la base de donnees retourne une voiture qui n a pas ete loue" name="un client enregistre dans la base de donnees retourne une voiture qui n a pas ete loue" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2943" timestamp="2016-12-05T14:42:45.914-05:00">
+  <user-story id="cas_de_retours" name="Cas de retours" path="stories/cas_de_retours.story"/>
+  <tags>
+    <tag name="Cas de retours" type="story"/>
+    <tag name="Sample story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="14">
+    <description>Given un client de numero de permis {AM002310} qui veut retourner une voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="10">
+    <description>Given une voiture de matricule {20162010} {Disponible}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="10">
+    <description>When le client veut retourner la dite voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="9">
+    <description>Then la methode verifierVoiture doit retourner {faux}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3">
+    <description>And la methode retournerVoiture doit retourner faux</description>
+  </test-step>
+</acceptance-test-run>

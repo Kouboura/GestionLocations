@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: ca.uqam.unittests.LouerVoitureClientEnregistreTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 7.492 sec <<< FAILURE! - in ca.uqam.unittests.LouerVoitureClientEnregistreTest
+verifierClientTest(ca.uqam.unittests.LouerVoitureClientEnregistreTest)  Time elapsed: 0.354 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ca.uqam.unittests.LouerVoitureClientEnregistreTest.verifierClientTest(LouerVoitureClientEnregistreTest.java:69)
+
+loueVoitureTest(ca.uqam.unittests.LouerVoitureClientEnregistreTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ca.uqam.unittests.LouerVoitureClientEnregistreTest.loueVoitureTest(LouerVoitureClientEnregistreTest.java:75)
+
+retrouverVehiculeTest(ca.uqam.unittests.LouerVoitureClientEnregistreTest)  Time elapsed: 0.005 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ca.uqam.unittests.LouerVoitureClientEnregistreTest.retrouverVehiculeTest(LouerVoitureClientEnregistreTest.java:63)
+
+voituresDisponiblesTest(ca.uqam.unittests.LouerVoitureClientEnregistreTest)  Time elapsed: 0.87 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ca.uqam.unittests.LouerVoitureClientEnregistreTest.voituresDisponiblesTest(LouerVoitureClientEnregistreTest.java:57)
+

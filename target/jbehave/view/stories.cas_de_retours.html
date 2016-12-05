@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>stories.cas_de_retours</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Sample story</h1>
+<div class="path">stories/cas_de_retours.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> tester d autres cas different du happy path</div>
+<div class="element asA"><span class="keyword asA">As a</span> utilisateur</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> verifier que l application retorune la voiture a celui qui l a effectivement louee</div>
+</div>
+<div class="scenario">
+<h2>Scenario: un client enregistre dans la base de donnees veut retourner une voiture alors qu'il n'a pas loue de voiture</h2>
+<div class="step successful">Given un client de numero de permis <span class="step parameter">AM002300</span> qui n a pas loue de voiture</div>
+<div class="step successful">When le client choisi l option retourner une voiture et entre son numero de permis</div>
+<div class="step successful">Then la methode verifierLocataire doit retourner <span class="step parameter">faux</span></div>
+</div>
+<div class="scenario">
+<h2>Scenario: un client enregistre dans la base de donnees retourne une voiture qui n a pas ete loue</h2>
+<div class="step successful">Given un client de numero de permis <span class="step parameter">AM002310</span> qui veut retourner une voiture</div>
+<div class="step successful">Given une voiture de matricule <span class="step parameter">20162010</span> <span class="step parameter">Disponible</span></div>
+<div class="step successful">When le client veut retourner la dite voiture</div>
+<div class="step successful">Then la methode verifierVoiture doit retourner <span class="step parameter">faux</span></div>
+<div class="step successful">And la methode retournerVoiture doit retourner faux</div>
+</div>
+<div class="scenario">
+<h2>Scenario: un client retourne une voiture mais il n est pas celui qui a loue la voiture</h2>
+<div class="step successful">Given un client avec pour numero de permis <span class="step parameter">AM002310</span></div>
+<div class="step successful">Given une voiture <span class="step parameter">Louee</span> qui a pour matricule <span class="step parameter">20162011</span> mais pas louee par le dit client</div>
+<div class="step successful">When le client choisi de retourner la dite voiture</div>
+<div class="step successful">Then le retour n est pas effectue</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

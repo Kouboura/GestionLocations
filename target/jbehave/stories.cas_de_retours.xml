@@ -1,0 +1,25 @@
+<story path="stories/cas_de_retours.story" title="Sample story">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">tester d autres cas different du happy path</inOrderTo>
+  <asA keyword="As a">utilisateur</asA>
+  <iWantTo keyword="I want to">verifier que l application retorune la voiture a celui qui l a effectivement louee</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="un client enregistre dans la base de donnees veut retourner une voiture alors qu&apos;il n&apos;a pas loue de voiture">
+<step outcome="successful">Given un client de numero de permis <parameter>AM002300</parameter> qui n a pas loue de voiture</step>
+<step outcome="successful">When le client choisi l option retourner une voiture et entre son numero de permis</step>
+<step outcome="successful">Then la methode verifierLocataire doit retourner <parameter>faux</parameter></step>
+</scenario>
+<scenario keyword="Scenario:" title="un client enregistre dans la base de donnees retourne une voiture qui n a pas ete loue">
+<step outcome="successful">Given un client de numero de permis <parameter>AM002310</parameter> qui veut retourner une voiture</step>
+<step outcome="successful">Given une voiture de matricule <parameter>20162010</parameter> <parameter>Disponible</parameter></step>
+<step outcome="successful">When le client veut retourner la dite voiture</step>
+<step outcome="successful">Then la methode verifierVoiture doit retourner <parameter>faux</parameter></step>
+<step outcome="successful">And la methode retournerVoiture doit retourner faux</step>
+</scenario>
+<scenario keyword="Scenario:" title="un client retourne une voiture mais il n est pas celui qui a loue la voiture">
+<step outcome="successful">Given un client avec pour numero de permis <parameter>AM002310</parameter></step>
+<step outcome="successful">Given une voiture <parameter>Louee</parameter> qui a pour matricule <parameter>20162011</parameter> mais pas louee par le dit client</step>
+<step outcome="successful">When le client choisi de retourner la dite voiture</step>
+<step outcome="successful">Then le retour n est pas effectue</step>
+</scenario>
+</story>

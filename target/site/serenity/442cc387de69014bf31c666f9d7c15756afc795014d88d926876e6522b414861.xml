@@ -1,0 +1,27 @@
+<acceptance-test-run title="un client non enregistre dans la base de donnees loue une voiture" name="un client non enregistre dans la base de donnees loue une voiture" steps="7" successful="7" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2252" timestamp="2016-12-05T14:43:05.235-05:00">
+  <user-story id="louer_retourner_client_non_enregistre" name="Louer retourner client non enregistre" path="stories/louer_retourner_client_non_enregistre.story"/>
+  <tags>
+    <tag name="Louer retourner client non enregistre" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="10">
+    <description>Given un nouveau client de numero de permis {MAMA18529503}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="9">
+    <description>Given une voiture dont l etat est {Disponible} de matricule {789596}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="16">
+    <description>When le nouveau client s identifie avec le numero de permis {MAMA18529503} le nom {MAMA} le prenom {Kouboura} le telephone {5145683227} et l adresse {110RueDeLaBarre}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="27">
+    <description>When le nouveau client loue la voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4">
+    <description>Then le nouveau client est enregistre dans la base de donnees</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="15">
+    <description>And une location est creee</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="7">
+    <description>And l etat de la voiture change et passe a {Louee}</description>
+  </test-step>
+</acceptance-test-run>

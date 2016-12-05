@@ -1,0 +1,15 @@
+<acceptance-test-run title="le client ci dessus retourne la voiture" name="le client ci dessus retourne la voiture" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2627" timestamp="2016-12-05T14:43:01.138-05:00">
+  <user-story id="louer_retourner_client_enregistre" name="Louer retourner client enregistre" path="stories/louer_retourner_client_enregistre.story"/>
+  <tags>
+    <tag name="Louer retourner client enregistre" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="22">
+    <description>Given une voiture {789596} a ete loue par un client de numero de permis {AM002300}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="28">
+    <description>When le client retourne la voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4">
+    <description>Then l etat de la voiture devient {Disponible}</description>
+  </test-step>
+</acceptance-test-run>

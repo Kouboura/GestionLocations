@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Louer retourner client non enregistre" skipped="0" tests="2" time="4.71" timestamp="2016-12-340 02:43:05"><testcase name="un client non enregistre dans la base de donnees loue une voiture"/><testcase name="un client qui a loue une voiture retourne la voiture"/></testsuite>

@@ -1,0 +1,21 @@
+<acceptance-test-run title="un client enregistre dans la base de donnees loue une voiture" name="un client enregistre dans la base de donnees loue une voiture" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="3563" timestamp="2016-12-05T14:42:57.574-05:00">
+  <user-story id="louer_retourner_client_enregistre" name="Louer retourner client enregistre" path="stories/louer_retourner_client_enregistre.story"/>
+  <tags>
+    <tag name="Louer retourner client enregistre" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="15">
+    <description>Given un client de numero de permis {AM002300} enregistre dans la base de donnees</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="21">
+    <description>Given une voiture {789596} dont l etat est {Disponible}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="74">
+    <description>When le client loue la voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="95">
+    <description>Then une location est cree dans la base de donnees</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="8">
+    <description>And l etat de la voiture passe a {Louee}</description>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>stories.louer_retourner_client_non_enregistre</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="stories/louer_retourner_client_non_enregistre.story" title="Sample story">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">verifier que je peux louer une voiture a un client non enregistre dans la base de donnees et faire retourner la voiture</inOrderTo>
+  <asA keyword="As a">utilisateur</asA>
+  <iWantTo keyword="I want to">louer une voiture a un client enregistre et retourner la voiture</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="un client non enregistre dans la base de donnees loue une voiture">
+<step outcome="successful">Given un nouveau client de numero de permis <parameter>MAMA18529503</parameter></step>
+<step outcome="successful">Given une voiture dont l etat est <parameter>Disponible</parameter> de matricule <parameter>789596</parameter></step>
+<step outcome="successful">When le nouveau client s identifie avec le numero de permis <parameter>MAMA18529503</parameter> le nom <parameter>MAMA</parameter> le prenom <parameter>Kouboura</parameter> le telephone <parameter>5145683227</parameter> et l adresse <parameter>110RueDeLaBarre</parameter></step>
+<step outcome="successful">When le nouveau client loue la voiture</step>
+<step outcome="successful">Then le nouveau client est enregistre dans la base de donnees</step>
+<step outcome="successful">And une location est creee</step>
+<step outcome="successful">And l etat de la voiture change et passe a <parameter>Louee</parameter></step>
+</scenario>
+<scenario keyword="Scenario:" title="un client qui a loue une voiture retourne la voiture">
+<step outcome="successful">Given un client de numero de permis <parameter>MAMA18529503</parameter> qui a louee une voiture de matricule <parameter>789596</parameter></step>
+<step outcome="successful">When le dit client retourne la voiture</step>
+<step outcome="successful">Then l etat de la voiture louee par ce client devient <parameter>Disponible</parameter></step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,16 @@
+<acceptance-test-run title="un client enregistre dans la base de donnees veut retourner une voiture alors qu&apos;il n&apos;a pas loue de voiture" name="un client enregistre dans la base de donnees veut retourner une voiture alors qu&apos;il n&apos;a pas loue de voiture" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="3361" timestamp="2016-12-05T14:42:42.442-05:00">
+  <user-story id="cas_de_retours" name="Cas de retours" path="stories/cas_de_retours.story"/>
+  <tags>
+    <tag name="Cas de retours" type="story"/>
+    <tag name="Sample story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="28">
+    <description>Given un client de numero de permis {AM002300} qui n a pas loue de voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="23">
+    <description>When le client choisi l option retourner une voiture et entre son numero de permis</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="13">
+    <description>Then la methode verifierLocataire doit retourner {faux}</description>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,130 @@
+<xref>
+  <whenMade>1480966991186</whenMade>
+  <createdBy>JBehave</createdBy>
+  <metaFilter>-ignore</metaFilter>
+  <meta/>
+  <stories>
+    <story>
+      <description>Sample story</description>
+      <narrative>In order to tester d autres cas different du happy path
+As a utilisateur
+I want to verifier que l application retorune la voiture a celui qui l a effectivement louee
+</narrative>
+      <name>cas_de_retours.story</name>
+      <path>stories/cas_de_retours.story</path>
+      <html>stories.cas_de_retours.html</html>
+      <meta></meta>
+      <scenarios>Scenario:un client enregistre dans la base de donnees veut retourner une voiture alors qu&apos;il n&apos;a pas loue de voiture
+Given un client de numero de permis AM002300 qui n a pas loue de voiture
+When le client choisi l option retourner une voiture et entre son numero de permis
+Then la methode verifierLocataire doit retourner faux
+
+
+Scenario:un client enregistre dans la base de donnees retourne une voiture qui n a pas ete loue
+Given un client de numero de permis AM002310 qui veut retourner une voiture
+Given une voiture de matricule 20162010 Disponible
+When le client veut retourner la dite voiture
+Then la methode verifierVoiture doit retourner faux
+And la methode retournerVoiture doit retourner faux
+
+
+Scenario:un client retourne une voiture mais il n est pas celui qui a loue la voiture
+Given un client avec pour numero de permis AM002310
+Given une voiture Louee qui a pour matricule 20162011 mais pas louee par le dit client
+When le client choisi de retourner la dite voiture
+Then le retour n est pas effectue
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1480966962350</started>
+      <duration>8950</duration>
+    </story>
+    <story>
+      <description>Sample story</description>
+      <narrative>In order to 
+As a user
+I want to display an existing customer
+</narrative>
+      <name>rechercher_client.story</name>
+      <path>stories/rechercher_client.story</path>
+      <html>stories.rechercher_client.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Je veux chercher un client existant
+Given Le client existe dans la base : AM002300
+When Je cherche le client
+Then je devrais avoir les detailles de client: &lt;Nom&gt; &lt;Prenom&gt; &lt;Numerotel&gt; &lt;Adresse&gt;
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1480966973854</started>
+      <duration>2268</duration>
+    </story>
+    <story>
+      <description>Sample story</description>
+      <narrative>In order to verifier que je peux louer une voiture a un client enregistre dans la base de donnees et faire retourner la voiture
+As a utilisateur
+I want to louer une voiture a un client enregistre et retourner la voiture
+</narrative>
+      <name>louer_retourner_client_enregistre.story</name>
+      <path>stories/louer_retourner_client_enregistre.story</path>
+      <html>stories.louer_retourner_client_enregistre.html</html>
+      <meta></meta>
+      <scenarios>Scenario:un client enregistre dans la base de donnees loue une voiture
+Given un client de numero de permis AM002300 enregistre dans la base de donnees
+Given une voiture 789596 dont l etat est Disponible
+When le client loue la voiture
+Then une location est cree dans la base de donnees
+And l etat de la voiture passe a Louee
+
+
+Scenario:le client ci dessus retourne la voiture
+Given une voiture 789596 a ete loue par un client de numero de permis AM002300
+When le client retourne la voiture
+Then l etat de la voiture devient Disponible
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1480966977569</started>
+      <duration>6196</duration>
+    </story>
+    <story>
+      <description>Sample story</description>
+      <narrative>In order to verifier que je peux louer une voiture a un client non enregistre dans la base de donnees et faire retourner la voiture
+As a utilisateur
+I want to louer une voiture a un client enregistre et retourner la voiture
+</narrative>
+      <name>louer_retourner_client_non_enregistre.story</name>
+      <path>stories/louer_retourner_client_non_enregistre.story</path>
+      <html>stories.louer_retourner_client_non_enregistre.html</html>
+      <meta></meta>
+      <scenarios>Scenario:un client non enregistre dans la base de donnees loue une voiture
+Given un nouveau client de numero de permis MAMA18529503
+Given une voiture dont l etat est Disponible de matricule 789596
+When le nouveau client s identifie avec le numero de permis MAMA18529503 le nom MAMA le prenom Kouboura le telephone 5145683227 et l adresse 110RueDeLaBarre
+When le nouveau client loue la voiture
+Then le nouveau client est enregistre dans la base de donnees
+And une location est creee
+And l etat de la voiture change et passe a Louee
+
+
+Scenario:un client qui a loue une voiture retourne la voiture
+Given un client de numero de permis MAMA18529503 qui a louee une voiture de matricule 789596
+When le dit client retourne la voiture
+Then l etat de la voiture louee par ce client devient Disponible
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1480966985231</started>
+      <duration>4716</duration>
+    </story>
+  </stories>
+  <stepMatches/>
+</xref>

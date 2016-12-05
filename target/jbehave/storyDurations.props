@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Mon Dec 05 14:43:10 EST 2016
+stories/louer_retourner_client_non_enregistre.story=4000
+threads=1
+total=4000
+threadAverage=4000

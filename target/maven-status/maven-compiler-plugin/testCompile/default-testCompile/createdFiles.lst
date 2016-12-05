@@ -1,0 +1,10 @@
+ca/uqam/jbehavetests/LouerRetournerClientEnregistre.class
+ca/uqam/jbehavetests/LouerRetournerClientNonEnregistreSteps.class
+ca/uqam/jbehavetests/RechercherClientSteps.class
+ca/uqam/jbehavetests/AutresCasDeRetoursSteps.class
+ca/uqam/unittests/LouerVoitureClientEnregistreTest.class
+ca/uqam/jbehavetests/LouerRetournerClientNonEnregistre.class
+ca/uqam/unittests/RetournerVoitureTest.class
+ca/uqam/jbehavetests/CasDeRetours.class
+ca/uqam/jbehavetests/RechercherClient.class
+ca/uqam/jbehavetests/LouerRetournerClientEnregistreSteps.class

@@ -1,0 +1,10 @@
+ca/uqam/console/App.class
+ca/uqam/model/Location.class
+ca/uqam/model/Client.class
+ca/uqam/console/Main.class
+ca/uqam/config/Config.class
+ca/uqam/model/Vehicule.class
+ca/uqam/console/PairVehiculeClient.class
+ca/uqam/repositories/VehiculeRepository.class
+ca/uqam/repositories/ClientRepository.class
+ca/uqam/repositories/LocationRepository.class

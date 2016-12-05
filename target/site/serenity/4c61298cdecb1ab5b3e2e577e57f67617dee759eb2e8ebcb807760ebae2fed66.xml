@@ -1,0 +1,36 @@
+<acceptance-test-run title="Je veux chercher un client existant" name="Je veux chercher un client existant" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2263" timestamp="2016-12-05T14:42:53.858-05:00">
+  <user-story id="rechercher_client" name="Rechercher client" path="stories/rechercher_client.story"/>
+  <tags>
+    <tag name="Rechercher client" type="story"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0"/>
+    </datasets>
+    <headers>
+      <header>Nom</header>
+      <header>Prenom</header>
+      <header>Numerotel</header>
+      <header>Adresse</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>Armelle</value>
+        <value>Tenekeu</value>
+        <value>5147718969</value>
+        <value>1345 rue saint charles</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {Nom=Armelle, Prenom=Tenekeu, Numerotel=5147718969, Adresse=1345 rue saint charles}" result="SUCCESS">
+    <test-step result="SUCCESS" duration="9">
+      <description>Given Le client existe dans la base : {AM002300}</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2">
+      <description>When Je cherche le client</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="3">
+      <description>Then je devrais avoir les detailles de client: {Armelle} {Tenekeu} {5147718969} {1345 rue saint charles}</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

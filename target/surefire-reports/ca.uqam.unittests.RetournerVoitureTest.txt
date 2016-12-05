@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ca.uqam.unittests.RetournerVoitureTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.167 sec <<< FAILURE! - in ca.uqam.unittests.RetournerVoitureTest
+retournerVoitureTest(ca.uqam.unittests.RetournerVoitureTest)  Time elapsed: 0.016 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ca.uqam.unittests.RetournerVoitureTest.retournerVoitureTest(RetournerVoitureTest.java:52)
+

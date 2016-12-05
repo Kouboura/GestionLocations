@@ -1,0 +1,19 @@
+<story path="stories/louer_retourner_client_enregistre.story" title="Sample story">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">verifier que je peux louer une voiture a un client enregistre dans la base de donnees et faire retourner la voiture</inOrderTo>
+  <asA keyword="As a">utilisateur</asA>
+  <iWantTo keyword="I want to">louer une voiture a un client enregistre et retourner la voiture</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="un client enregistre dans la base de donnees loue une voiture">
+<step outcome="successful">Given un client de numero de permis <parameter>AM002300</parameter> enregistre dans la base de donnees</step>
+<step outcome="successful">Given une voiture <parameter>789596</parameter> dont l etat est <parameter>Disponible</parameter></step>
+<step outcome="successful">When le client loue la voiture</step>
+<step outcome="successful">Then une location est cree dans la base de donnees</step>
+<step outcome="successful">And l etat de la voiture passe a <parameter>Louee</parameter></step>
+</scenario>
+<scenario keyword="Scenario:" title="le client ci dessus retourne la voiture">
+<step outcome="successful">Given une voiture <parameter>789596</parameter> a ete loue par un client de numero de permis <parameter>AM002300</parameter></step>
+<step outcome="successful">When le client retourne la voiture</step>
+<step outcome="successful">Then l etat de la voiture devient <parameter>Disponible</parameter></step>
+</scenario>
+</story>

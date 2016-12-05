@@ -1,0 +1,19 @@
+<acceptance-test-run title="un client retourne une voiture mais il n est pas celui qui a loue la voiture" name="un client retourne une voiture mais il n est pas celui qui a loue la voiture" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2440" timestamp="2016-12-05T14:42:48.859-05:00">
+  <user-story id="cas_de_retours" name="Cas de retours" path="stories/cas_de_retours.story"/>
+  <tags>
+    <tag name="Cas de retours" type="story"/>
+    <tag name="Sample story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="9">
+    <description>Given un client avec pour numero de permis {AM002310}</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="9">
+    <description>Given une voiture {Louee} qui a pour matricule {20162011} mais pas louee par le dit client</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="7">
+    <description>When le client choisi de retourner la dite voiture</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2">
+    <description>Then le retour n est pas effectue</description>
+  </test-step>
+</acceptance-test-run>
